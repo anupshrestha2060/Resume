@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Anup Shrestha | Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f2027, #1a2b44, #203a57);
+            color: #eee;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            background: rgba(20, 20, 40, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.7);
+            padding: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .intro {
+            flex: 1 1 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+            .intro h1 {
+                font-size: 3rem;
+                margin-bottom: 10px;
+                color: #1f3b73;
+            }
+
+            .intro h2 {
+                font-weight: 500;
+                font-size: 1.5rem;
+                color: #aac8ff;
+                margin-bottom: 25px;
+                letter-spacing: 1px;
+            }
+
+            .intro p {
+                font-size: 1.1rem;
+                line-height: 1.6;
+                color: #ddd;
+                max-width: 480px;
+            }
+
+        .profile-photo {
+            flex: 0 0 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 20px #1f3b73;
+            border: 3px solid #16294d;
+            height: 300px;
+            width: 300px;
+        }
+
+            .profile-photo img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+        /* Section headers */
+        .section {
+            flex-basis: 100%;
+        }
+
+            .section h3 {
+                color: #1f3b73;
+                font-size: 2rem;
+                margin-bottom: 20px;
+                border-bottom: 2px solid #16294d;
+                display: inline-block;
+                padding-bottom: 5px;
+                cursor: pointer;
+                user-select: none;
+            }
+
+        /* List styles */
+        ul {
+            list-style-type: none;
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Toggleable items */
+        .toggle-item {
+            margin-bottom: 12px;
+        }
+
+        .toggle-btn {
+            background: none;
+            border: none;
+            color: #aac8ff;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            text-align: left;
+            width: 100%;
+            padding: 5px 0;
+            user-select: none;
+        }
+
+            .toggle-btn:hover {
+                color: #1f3b73;
+            }
+
+        .description {
+            display: none;
+            padding-left: 15px;
+            color: #ddd;
+            font-size: 0.95rem;
+            margin-top: 5px;
+            line-height: 1.4;
+        }
+
+            .description.show {
+                display: block;
+            }
+
+        /* Education cards */
+        .edu-card {
+            background: #22263d;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px #1f3b73;
+            border-left: 6px solid #1f3b73;
+            margin-bottom: 20px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+            .edu-card:hover {
+                background: #2b3b5c;
+                box-shadow: 0 0 15px #1f3b73;
+            }
+
+        .edu-title {
+            font-size: 1.4rem;
+            color: #aac8ff;
+            font-weight: 600;
+        }
+
+        .edu-subtitle {
+            font-size: 1rem;
+            font-style: italic;
+            color: #90b3e5;
+            margin-top: 5px;
+        }
+
+        .edu-duration, .gpa {
+            font-size: 0.9rem;
+            color: #bbb;
+            margin-top: 4px;
+        }
+
+        .contact {
+            margin-top: 40px;
+            max-width: 700px;
+        }
+
+            .contact p {
+                font-size: 1.1rem;
+                margin-bottom: 10px;
+            }
+
+            .contact a {
+                color: #1f3b73;
+                text-decoration: none;
+                font-weight: 600;
+                transition: color 0.3s ease;
+            }
+
+                .contact a:hover {
+                    color: #aac8ff;
+                }
+
+        /* Responsive */
+        @media (max-width: 800px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .intro,
+            .profile-photo {
+                flex: unset;
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .profile-photo {
+                height: 280px;
+                margin-top: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <section class="intro">
+            <h1>Anup Shrestha</h1>
+            <h2>Computer Engineering Student | Developer | Tech Enthusiast</h2>
+            <p>
+                Passionate about developing creative and efficient solutions using modern technologies. Currently pursuing Computer Engineering with a keen interest in web development, programming, and research. Skilled in Python, Django, HTML, CSS, SQL, and always eager to learn new skills to build impactful projects.
+            </p>
+        </section>
+        <section class="profile-photo">
+            <img src="anup.jpg" alt="Anup Shrestha Profile Photo" />
+        </section>
+
+        <section class="section">
+            <h3>Education</h3>
+            <div class="education-list">
+                <div class="edu-card">
+                    <div class="edu-title toggle-btn" onclick="toggleDescription(this)">Bachelor of Engineering in Computer Engineering</div>
+                    <div class="edu-subtitle">Purbanchal University</div>
+                    <div class="edu-duration">2023 - Present</div>
+                    <div class="gpa description" style="display:none;">
+                        GPA: 3.5 / 4.0 — Maintaining excellent grades with a focus on software development and data structures.
+                    </div>
+                </div>
+
+                <div class="edu-card">
+                    <div class="edu-title toggle-btn" onclick="toggleDescription(this)">Higher Secondary School</div>
+                    <div class="edu-subtitle">Science Stream</div>
+                    <div class="edu-duration">2019 - 2021</div>
+                    <div class="gpa description" style="display:none;">
+                        GPA: (3.91-3.51) / 4.0 — Strong foundation in science and mathematics, active participation in science fairs.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            function toggleDescription(element) {
+                // Find the next sibling with the class 'description'
+                const description = element.parentElement.querySelector('.description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                } else {
+                    description.style.display = 'none';
+                }
+            }
+        </script>
+
+        <style>
+            .toggle-btn {
+                cursor: pointer;
+                color: #aac8ff;
+            }
+
+                .toggle-btn:hover {
+                    color: #1f3b73;
+                    text-decoration: underline;
+                }
+        </style>
+
+
+
+
+        <!-- Leadership Section -->
+        <section class="section">
+            <h3 class="section-toggle">Leadership</h3>
+            <ul>
+                <li class="toggle-item">
+                    <button class="toggle-btn">Founder Member, Aashish Foundation</button>
+                    <p class="description">A non-profit entity focused on improving education welfare for underprivileged students.</p>
+                </li>
+                <li class="toggle-item">
+                    <button class="toggle-btn">SDG Ambassador, WASH Program</button>
+                    <p class="description">Led a Wash program empowering youth with global citizenship education, supported by UNESCO APCEIU.</p>
+                </li>
+                <li class="toggle-item">
+                    <button class="toggle-btn">Book Free Friday Mentor</button>
+                    <p class="description">Guided government school students by connecting them to real-life challenges, organized by Kathmandu Metropolitan City.</p>
+                </li>
+                <li class="toggle-item">
+                    <button class="toggle-btn">Program Coordinator, SDSN Club</button>
+                    <p class="description">Organized sustainable development programs and coordinated member activities.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Honors and Awards -->
+        <section class="section">
+            <h3 class="section-toggle">Honors and Awards</h3>
+            <ul>
+                <li class="toggle-item">
+                    <button class="toggle-btn">Mr. Fresher (2023)</button>
+                    <p class="description">Awarded for outstanding performance and leadership among new students.</p>
+                </li>
+                <li class="toggle-item">
+                    <button class="toggle-btn">1st Place, Photography Competition (2021)</button>
+                    <p class="description">Recognized for exceptional creativity and high-quality photography.</p>
+                </li>
+                <li class="toggle-item">
+                    <button class="toggle-btn">3rd Place, Photography Competition (2022)</button>
+                    <p class="description">Honored for outstanding composition and originality.</p>
+                </li>
+                <li class="toggle-item">
+                    <button class="toggle-btn">Record Holder, 200m Running, Dolakha (2019)</button>
+                    <p class="description">Set a new record time, demonstrating exceptional speed and endurance.</p>
+                </li>
+                <li class="toggle-item">
+                    <button class="toggle-btn">Winner, Football Tournament, Dolakha (2020)</button>
+                    <p class="description">Contributed to the team with outstanding skills in strategy and execution, leading the team to victory.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Extracurricular & Volunteer -->
+        <section class="section">
+            <h3 class="section-toggle">Extracurricular & Volunteer</h3>
+            <ul>
+                <li class="toggle-item">
+                    <button class="toggle-btn">Volunteer Photographer – Youth Speaker (2022)</button>
+                    <p class="description">Provided photography and event coverage support during speech competitions.</p>
+                </li>
+                <li class="toggle-item">
+                    <button class="toggle-btn">Member – Robotics Club (2022)</button>
+                    <p class="description">Designed, built, and programmed robots for competitions.</p>
+                </li>
+                <li class="toggle-item">
+                    <button class="toggle-btn">VSN IT Club Contributor (2077/78)</button>
+                    <p class="description">Consistent participation and contributions to technical events and projects.</p>
+                </li>
+                <li class="toggle-item">
+                    <button class="toggle-btn">Volunteer – Youth Speaker Club (2023)</button>
+                    <p class="description">Assisted in organizing public speaking events and mentoring junior members.</p>
+                </li>
+                <li class="toggle-item">
+                    <button class="toggle-btn">Participant – SQC Coding Competition (Dec 2023)</button>
+                    <p class="description">Competed in a structured coding challenge focusing on problem-solving and programming.</p>
+                </li>
+                <li class="toggle-item">
+                    <button class="toggle-btn">Photographer – KCC Esports Championship (Dec 2023)</button>
+                    <p class="description">Received certificate for media coverage and capturing event highlights.</p>
+                </li>
+                <li class="toggle-item">
+                    <button class="toggle-btn">WASH Program – UN House, Pulchowk (2023)</button>
+                    <p class="description">Engaged in youth workshops focused on global citizenship and sustainable development.</p>
+                </li>
+                <li class="toggle-item">
+                    <button class="toggle-btn">Volunteer – SAAF Nepal (2024–2025)</button>
+                    <p class="description">Mentored students in government schools, bridging academics and real-world challenges.</p>
+                </li>
+                <li class="toggle-item">
+                    <button class="toggle-btn">Youth Speak Forum – AIESEC Nepal (Jan 2025)</button>
+                    <p class="description">Participated in youth-led discussions on leadership and social impact.</p>
+                </li>
+                <li class="toggle-item">
+                    <button class="toggle-btn">3rd Position – KCC Game Jam (Apr 2025)</button>
+                    <p class="description">Earned 3rd place for game development under time constraints, showcasing teamwork and creativity.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Skills -->
+        <section class="section">
+            <h3 class="section-toggle">Skills</h3>
+            <ul>
+                <li class="toggle-item">
+                    <button class="toggle-btn">Photography</button>
+                    <p class="description">Experienced in digital and event photography with a keen eye for detail.</p>
+                </li>
+                <li class="toggle-item">
+                    <button class="toggle-btn">Programming Languages</button>
+                    <p class="description">Proficient in C++, Python, C, CSS, and HTML with hands-on project experience.</p>
+                </li>
+                <li class="toggle-item">
+                    <button class="toggle-btn">Personal Skills</button>
+                    <p class="description">Public speaking, team collaboration, mentoring, leadership, and flexibility.</p>
+                </li>
+                <li class="toggle-item">
+                    <button class="toggle-btn">Other Skills</button>
+                    <p class="description">Strategic planning, event organization, and problem solving.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Languages -->
+        <section class="section">
+            <h3 class="section-toggle">Languages</h3>
+            <p>English, Nepali, Hindi</p>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact">
+            <h3>Contact</h3>
+            <p>Email: <a href="mailto:anupshrestha865@gmail.com">anupshrestha865@gmail.com</a></p>
+            <p>Phone: <a href="tel:+9779869153623">+977 9869153623</a></p>
+        </section>
+    </main>
+
+    <script>
+    // Toggle descriptions on item click
+    document.querySelectorAll('.toggle-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const desc = button.nextElementSibling;
+        if (desc) {
+          desc.classList.toggle('show');
+        }
+      });
+    });
+
+    // Optional: Toggle entire sections (hide/show all items)
+    document.querySelectorAll('.section-toggle').forEach(header => {
+      header.addEventListener('click', () => {
+        const section = header.nextElementSibling;
+        if (!section) return;
+        // If it's a div (education) or ul (others)
+        if (section.style.display === 'none') {
+          section.style.display = 'block';
+        } else {
+          section.style.display = 'none';
+        }
+      });
+    });
+    </script>
+</body>
+</html>
